@@ -1,0 +1,13 @@
+import personas.*
+import spa.*
+
+test "spa atiende a Ramiro" {
+	ramiro.diaDeTrabajo()
+	assert.equals(2,ramiro.nivelDeContractura())
+	assert.that(ramiro.tienePielGrasosa())
+	spa.atender(ramiro)
+	assert.notThat(ramiro.tienePielGrasosa())
+	assert.that(ramiro.nivelDeContractura()<2)	
+
+	
+}
